@@ -19,10 +19,6 @@ public class Board extends BaseTimeEntity{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idx;
 
-    // 추가 ( 중요할일 리스트 , 해야할일 리스트 >
-
-
-
     @Column(nullable = false)
     private String board_name;
 

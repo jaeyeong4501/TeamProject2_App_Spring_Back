@@ -13,8 +13,6 @@ import com.busanit.service.BoardService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -26,7 +24,6 @@ public class BoardRestController {
     private BlogService blogService;
     private BoardService boardService;
     private BlogReplyService blogReplyService;
-//    private BoardDTO boardDTO;
 
     @RequestMapping("/test")
     public String runTest() {
@@ -48,18 +45,18 @@ public class BoardRestController {
         return blogService.getBlog(idx);
     }
 
+
+
     @PostMapping("/write")
     public void writeBlog(@RequestBody BlogDTO blogDTO) {
         blogService.writeBlog(blogDTO);
     }
 
-
-
-    //----------------------------------------------board write
+    //board write
     // 1차 완성, 뼈대.
     @PostMapping("/boardWrite")
-    public void writeBoard(@RequestBody BoardDTO boardDTO) {
-        boardService.writeBoard(boardDTO);
+    public void writeBoard(@RequestBody BoardDTO baordDTO) {
+        blogService.writeBoard(baordDTO);
     }
 
     // 보드 하나 가져오기.
@@ -68,33 +65,14 @@ public class BoardRestController {
         return boardService.getBoard(idx);
     }
 
-
-
     // 보드 여러개 들고 오기.
-    // @GET("board/boardList")
     @GetMapping("/boardList")
     public List<Board> getBoardList() {
-
         return boardService.getBoardList();
     }
 
-        ///보드 중요한일  불러오기  important ought
 
-//        @GetMapping("/boardListImportant")
-//        public List<Board> getBoardListImportant(String searchText) {return boardService.getBoardListImportant();}
-
-        /// 보드 해야할일 불러오기
-
-//            @GetMapping("/boardListOught")
-//            public List<Board> getBoardListOught() {
-//            return boardService.getBoardListOught();
-//        }}
-
-
-
-
-
-    //------------------------------------------boards write
+    //boards write
     @PostMapping("/boardsWrite")
     public void writeBoards(@RequestBody BoardsDTO boardsDTO) {
         boardService.writeBoards(boardsDTO);
@@ -107,13 +85,13 @@ public class BoardRestController {
         return boardService.getBoards(idx);
     }
 
-    // 보드s 여러개 들고 오기.
+    // 보드 여러개 들고 오기.
     @GetMapping("/boardsList")
     public List<Boards> getBoardsList() {
         return boardService.getBoardsList();
     }
 
-    //------------------------------------------------------------------------------
+    //
 
     @GetMapping("/remove")
     public void removeBlog(Long idx) {
