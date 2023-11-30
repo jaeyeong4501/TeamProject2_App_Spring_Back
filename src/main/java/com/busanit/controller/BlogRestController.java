@@ -26,9 +26,9 @@ public class BlogRestController {
     private BoardService boardService;
     private BlogReplyService blogReplyService;
 
-    @RequestMapping("/test")
+    @RequestMapping("/test1")
     public String runTest() {
-        return "리액트 연동 테스트2";
+        return "리액트 연동 테스트3";
     }
 
     @GetMapping("/list")
