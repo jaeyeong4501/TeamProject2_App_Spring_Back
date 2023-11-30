@@ -61,7 +61,7 @@ public class BlogService {
 //        return blogRepository.findByIdx(idx);
         return boardRepository.findByIdx(idx);
     }
-
+            // 보드 불러오기
     public void removeBlog(Long idx) {
         blogRepository.deleteById(idx);
     }
