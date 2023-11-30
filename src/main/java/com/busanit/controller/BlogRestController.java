@@ -60,9 +60,11 @@ public class BlogRestController {
    //-------------------board write----------------------------
     // 1차 완성, 뼈대.
     @PostMapping("/boardWrite")
-    public void writeBoard(@RequestBody BoardDTO baordDTO) {
-        blogService.writeBoard(baordDTO);
+    public void writeBoard(@RequestBody BoardDTO boardDTO) {
+        blogService.writeBoard(boardDTO);
     }
+
+
 
     // 보드 하나 가져오기.
     @GetMapping("/getBoard/{idx}")

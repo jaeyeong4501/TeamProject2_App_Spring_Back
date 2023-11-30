@@ -3,9 +3,11 @@ package com.busanit.service;
 import com.busanit.domain.BlogDTO;
 import com.busanit.domain.BoardDTO;
 import com.busanit.domain.BoardsDTO;
+import com.busanit.domain.UserDTO;
 import com.busanit.entity.Blog;
 import com.busanit.entity.Board;
 import com.busanit.entity.Boards;
+import com.busanit.entity.Users;
 import com.busanit.repository.BlogRepository;
 import com.busanit.repository.BoardRepository;
 import com.busanit.repository.BoardsRepository;
@@ -22,28 +24,7 @@ public class BoardService {
     private BoardRepository boardRepository;
     private BoardsRepository boardsRepository;
 
-//    public List<Blog> getBlogList() {
-//        return blogRepository.findAll();
-//    }
-//
-//    public List<Blog> getBlogSearchList(String searchText) {
-//        return blogRepository.findByTitleContaining(searchText);
-//    }
-//
-//    public Blog getBlog(Long idx) {
-//        return blogRepository.findByIdx(idx);
-//    }
-//
-//    public void writeBlog(BlogDTO blogDTO) {
-//        Blog blog = new Blog();
-//        if(blogDTO.getIdx() != null) {
-//            blog.setIdx(blogDTO.getIdx());
-//        }
-//        blog.setTitle(blogDTO.getTitle());
-//        blog.setContent(blogDTO.getContent());
-//
-//        blogRepository.save(blog);
-//    }
+
 
     // 보드 하나 쓰기.
     public void writeBoard(BoardDTO boardDTO) {
@@ -58,6 +39,8 @@ public class BoardService {
 //        blogRepository.save(blog);
         boardRepository.save(board);
     }
+
+
 
     // Board 하나 조회.
     public Board getBoard(Long idx) {

@@ -62,6 +62,8 @@ public class BoardRestController {
         boardService.writeBoard(boardDTO);
     }
 
+
+
     // 보드 하나 가져오기.
     @GetMapping("/getBoard/{idx}")
     public Board getBoard(@PathVariable("idx")Long idx) {

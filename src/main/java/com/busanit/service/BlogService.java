@@ -56,6 +56,8 @@ public class BlogService {
         boardRepository.save(board);
     }
 
+
+
     // Board 하나 조회.
     public Board getBoard(Long idx) {
 //        return blogRepository.findByIdx(idx);
