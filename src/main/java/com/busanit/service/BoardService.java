@@ -70,6 +70,16 @@ public class BoardService {
         return boardRepository.findAll();
     }
 
+    // 중요할일 보드 들고오기
+    public List<Board> getBoardListImportant() {
+        return boardRepository.findAll();
+    }
+
+    //해야 할일 보드 들고오기
+    public List<Board> getBoardListOught() {
+        return boardRepository.findAll();
+    }
+
     // 보드s 하나 쓰기.
     public void writeBoards(BoardsDTO boardsDTO) {
 //        Blog blog = new Blog();

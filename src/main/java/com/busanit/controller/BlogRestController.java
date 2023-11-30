@@ -53,7 +53,10 @@ public class BlogRestController {
         blogService.writeBlog(blogDTO);
     }
 
-    //board write
+
+
+
+   //-------------------board write----------------------------
     // 1차 완성, 뼈대.
     @PostMapping("/boardWrite")
     public void writeBoard(@RequestBody BoardDTO baordDTO) {
@@ -73,7 +76,7 @@ public class BlogRestController {
     }
 
 
-    //
+    //----------------------------------------------------------------
 
     @GetMapping("/remove")
     public void removeBlog(Long idx) {
