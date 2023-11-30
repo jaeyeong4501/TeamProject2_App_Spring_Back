@@ -28,7 +28,8 @@ public class BlogRestController {
 
     @RequestMapping("/test1")
     public String runTest() {
-        return "리액트 연동 테스트3";
+        return "리액트 연동 테스트3" +
+                "";
     }
 
     @GetMapping("/list")
